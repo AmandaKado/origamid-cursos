@@ -15,14 +15,16 @@ const bruno = new Pessoa('Bruno', 15);
 // Crie uma Constructor Function (Dom) para manipulação
 // de listas de elementos do dom. Deve conter as seguintes
 // propriedades e métodos:
-
-function Dom() {
-    this.node = 'NodeList()';
-    const elements = document.querySelectorAll('*');
-};
-
 //
 // elements, retorna NodeList com os elementos selecionados
+function Dom() {
+    this.seletor = document.querySelectorAll('*');
+    const elements = this.seletor;
+};
+
 // addClass(classe), adiciona a classe a todos os elementos
+
+
+
 // removeClass(classe), remove a classe a todos os elementos
 
