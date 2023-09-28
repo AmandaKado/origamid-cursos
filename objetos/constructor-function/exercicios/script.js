@@ -1,7 +1,10 @@
 // Transforme o objeto abaixo em uma Constructor Function
 function Pessoa(nome, idade) {
-this.nome = nome;
-this.idade = idade;
+    this.nome = nome;
+    this.idade = idade;
+    this.andar = function() {
+        console.log(this.nome + ' Andou');
+        }
 };
 
 // Crie 3 pessoas, João - 20 anos,
@@ -17,14 +20,13 @@ const bruno = new Pessoa('Bruno', 15);
 // propriedades e métodos:
 //
 // elements, retorna NodeList com os elementos selecionados
-function Dom() {
-    this.seletor = document.querySelectorAll('*');
-    const elements = this.seletor;
-};
 
 // addClass(classe), adiciona a classe a todos os elementos
 
-
-
 // removeClass(classe), remove a classe a todos os elementos
 
+function Dom(seletor) {
+    const elementList = document.querySelectorAll(seletor);
+    this.elements = elementList;
+    this.addClass = function
+};
