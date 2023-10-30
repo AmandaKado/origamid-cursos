@@ -57,3 +57,34 @@ const listaPreco = ['R$ 99,90', 'R$ 199', 'R$ 120000'];
 listaPreco.forEach((item) => {
     console.log(item.padStart(20, "-"));
 });
+
+const frase2 = 'Ta';
+
+frase.repeat(5);
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+
+listaItens = listaItens.replace(/[ ]+/g, ', ');
+
+const arrayLista = listaItens.split(', ');
+
+console.log(arrayLista);
+
+const htmlText = '<div> O melhor item</div><div>A melhor lista</div>';
+const htmlArray = htmlText.split('div');
+
+console.log(htmlArray);
+
+const frutasArray = ['Banana', 'Melancia', 'Laranja'];
+console.log(frutasArray.join(', '));
+
+const sexo1 = 'Feminino';
+const sexo2 = 'feminino';
+const sexo3 = 'FEMININO';
+
+console.log(sexo1.toLowerCase() === 'feminino');
+
+const valor = '    R$ 23.00     ';
+console.log(valor.trim());
+console.log(valor.trimEnd());
+console.log(valor.trimStart());
