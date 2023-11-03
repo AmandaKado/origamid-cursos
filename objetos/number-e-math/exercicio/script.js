@@ -1,77 +1,29 @@
-// Utilizando o foreach na array abaixo,
-// some os valores de Taxa e os valores de Recebimento
+// Retorne um número aleatório
+// entre 1050 e 2000
+const aleatorio = Math.floor(Math.random() * ( 2000 - 1050 + 1) + 1050);
+console.log(aleatorio);
 
-const transacoes = [
-    {
-        descricao: 'Taxa do Pão',
-        valor: 'R$ 39',
-    },
-    {
-        descricao: 'Taxa do Mercado',
-        valor: 'R$ 129',
-    },
-    {
-        descricao: 'Recebimento de Cliente',
-        valor: 'R$ 99',
-    },
-    {
-        descricao: 'Taxa do Banco',
-        valor: 'R$ 129',
-    },
-    {
-        descricao: 'Recebimento de Cliente',
-        valor: 'R$ 49',
-    },
-];
-let taxaTotal = 0;
-let recebimentoTotal = 0;
+// Retorne o maior número da lista abaixo
+const numeros = '4, 5, 20, 8, 9';
+const arrayNumeros = numeros.split(', ');
+const numeroMaximo = Math.max(...arrayNumeros);
+console.log(numeroMaximo);
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+let listaPrecos = ['R$ 59,99', ' R$ 100,222','R$ 230  ', 'r$  200'];
 
-transacoes.forEach((item) => {
-    const numeroLimpo = +item.valor.replace('R$ ', '');
-    if(item.descricao.slice(0,4) === 'Taxa') {
-        taxaTotal += numeroLimpo;
-    } else {
-        recebimentoTotal += numeroLimpo;
-    }
+function limparPreco(preco) {
+    preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.');
+    preco = +preco.toFixed(2);
+    return preco;
+}
+
+let soma = 0;
+listaPrecos.forEach((preco) => {
+    soma += limparPreco(preco);
 });
 
-console.log(taxaTotal);
-console.log(recebimentoTotal);
+console.log(soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
 
-  // Retorne uma array com a lista abaixo
-const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
-
-const arrayTransportes = transportes.split(';');
-console.log(arrayTransportes);
-
-  // Substitua todos os span's por a's
-let html = `<ul>
-                    <li><span>Sobre</span></li>
-                    <li><span>Produtos</span></li>
-                    <li><span>Contato</span></li>
-                </ul>`;
-
-html = html.split('span').join('a');
-
-
-  // Retorne o último caracter da frase
-const frase = 'Melhor do ano!';
-
-console.log(frase[frase.length - 1]);
-console.log(frase.slice(-1));
-
-  // Retorne o total de taxas
-const transacoes2 = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
-
-let taxasTotal = 0;
-transacoes2.forEach((item) => {
-    item = item.toLocaleLowerCase();
-    item = item.trim();
-    item = item.slice(0,4);
-
-    if(item === 'Taxa') {
-        taxasTotal++;
-    };
-});
-
-console.log(taxasTotal);
+limparPreco(listaPrecos[1]);
