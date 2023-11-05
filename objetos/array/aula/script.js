@@ -64,12 +64,47 @@
 // console.log(idades.sort());
 // console.log(idades);
 
-const carros = ['Ford', 'Fiat', 'VW'];
-carros.unshift('Kia', 'Ferrari');
-carros.push('Parati', 'Gol');
-console.log(carros.pop());
-console.log(carros.shift());
-carros.reverse();
+// const carros = ['Ford', 'Fiat', 'VW'];
+// carros.unshift('Kia', 'Ferrari');
+// carros.push('Parati', 'Gol');
+// // console.log(carros.pop());
+// // console.log(carros.shift());
+// carros.reverse();
 
-console.log(carros);
+// console.log(carros);
+// console.log(carros.splice(2, 4, 'Fusca'));
+// console.log(carros);
 
+// console.log(['Item1', 'Item2', 'Item3', 'Item4', 'Item5'].copyWithin(2, 0, 2));
+
+// console.log(['Item1', 'Item2', 'Item3', 'Item4', 'Item5'].fill('Banana', 2,4));
+
+// const transporte1 = ['Barco', 'Navio'];
+// const transporte2 = ['Carro', 'Moto'];
+// const transporte = transporte1.concat(transporte2, 'Bike');
+// console.log(transporte);
+// console.log([].concat(transporte1, transporte2, 'pé'));
+// console.log(['oi'].concat(transporte1, transporte2, 'pé'));
+
+// const linguagens = ['html', 'css', 'js', 'php', 'python', 'js'];
+
+// console.log(linguagens.includes('html'));
+// console.log(linguagens.includes('Java'));
+// console.log(linguagens.indexOf('js'));
+// console.log(linguagens.indexOf('Java'));
+// console.log(linguagens.lastIndexOf('js'));
+// console.log(linguagens.join());
+// console.log(linguagens.join(' '));
+
+// let htmlString = '<h2>Título Principal</h2>';
+
+// console.log(htmlString);
+
+// htmlString = htmlString.split('h2');
+// htmlString = htmlString.join('h1');
+// console.log(htmlString);
+
+const linguagens = ['html', 'css', 'js', 'php', 'python'];
+
+
+console.log(linguagens.slice(2, 4))
