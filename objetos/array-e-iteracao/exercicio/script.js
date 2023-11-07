@@ -1,7 +1,9 @@
 // Selecione cada curso e retorne uma array
 // com objetos contendo o título, descricao,
 // aulas e horas de cada curso
+const cursos = document.getElementsByClassName('curso');
 
+cursos = Array.from(cursos);
 
 // Retorne uma lista com os
 // números maiores que 100
