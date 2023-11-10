@@ -55,33 +55,60 @@
 
 // // ul.ativo.call(li, 'Ativar');
 
-const frutas = ['Uva', 'Maça', 'Banana'];
+// const frutas = ['Uva', 'Maça', 'Banana'];
 
 // Array.prototype.mostrarThis = function() {
 //     console.log(this);
 // };
 
-Array.prototype.pop.call(frutas);
-frutas.pop();
+// Array.prototype.pop.call(frutas);
+// frutas.pop();
 
-console.log(frutas);
+// console.log(frutas);
 
-const arrayLike = {
-    0: 'Item 1',
-    1: 'Item 2',
-    2: 'Item 3',
-    3: 'Item 4',
-    length: 4,
+// const arrayLike = {
+//     0: 'Item 1',
+//     1: 'Item 2',
+//     2: 'Item 3',
+//     3: 'Item 4',
+//     length: 4,
+// };
+
+// console.log(arrayLike);
+
+// const li = document.querySelectorAll('li');
+
+// const filtro = Array.prototype.filter.call(li, (item) => {
+//     return item.classList.contains('ativo');
+// });
+
+// console.log(filtro);
+
+// console.log(li);
+
+const numeros = [23, 23, 233 ,432 ,42432 , 42432, 3 ,2424];
+
+console.log(Math.max.call(null,  numeros));
+console.log(Math.max.apply(null,  numeros));
+
+const $ = document.querySelectorAll.bind(document);
+
+console.log($('li'));
+
+const carro = {
+    marca: 'Ford',
+    ano: 2018,
+    acelerar: function(aceleracao, tempo) {
+        return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
+    },
 };
 
-console.log(arrayLike);
+const honda = {
+    marca: 'Honda',
+};
 
-const li = document.querySelectorAll('li');
+const acelerarHonda = carro.acelerar.bind(honda, 2313);
 
-const filtro = Array.prototype.filter.call(li, (item) => {
-    return item.classList.contains('ativo');
-});
+console.log(acelerarHonda(20));
 
-console.log(filtro);
-
-console.log(li);
+console.log(carro.acelerar(100, 20));
