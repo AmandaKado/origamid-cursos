@@ -47,62 +47,86 @@
 // Object.assign(moto, funcaoAutomovel, carro);
 // console.log(moto);
 
-const moto = {
-    capacete: true,
+// const moto = {
+//     capacete: true,
+// };
+
+// Object.defineProperties(moto, {
+//     rodas: {
+//         get() {
+//             return this._rodas;
+//         },
+//         set(valor) {
+//             this._rodas = valor * 4;
+//         }
+//     }
+// })
+
+// console.log(moto);
+
+// console.log(Object.getOwnPropertyDescriptors(moto));
+
+// const innerHeightConfig = Object.getOwnPropertyDescriptor(window, 'innerHeight');
+
+// console.log(innerHeightConfig.configurable);
+
+// console.log(Object.keys(moto));
+// console.log(Object.values(moto));
+// console.log(Object.entries(moto));
+
+// const frutas = ['Banana'];
+
+// console.log(Object.getPrototypeOf(frutas));
+// console.log(Object.getPrototypeOf(''));
+// console.log(Array.prototype);
+
+// const frutas1 = ['Banana', 'Pêra'];
+// const frutas2 = ['Banana', 'Pêra'];
+// const novaFruta = frutas1;
+
+// console.log(Object.is(frutas1, frutas2));
+// console.log(Object.is(frutas1, novaFruta));
+
+// novaFruta[0] = 'Uva';
+
+// console.log(Object.is(frutas1, novaFruta));
+
+// const carro = {
+//     marca: 'Ford',
+//     ano: 2018,
+// }
+
+// // Object.seal(carro);
+// Object.preventExtensions(carro);
+// carro.portas = 4;
+// delete carro.marca;
+// carro.marca = 'Honda';
+
+// console.log(carro);
+// console.log(Object.isFrozen(carro));
+// console.log(Object.isExtensible(carro));
+// console.log(Object.isSealed(carro));
+
+// console.log(frutas.hasOwnProperty('map'));
+// console.log(Array.prototype.hasOwnProperty('map'));
+
+// console.log(Array.prototype.isPrototypeOf('frutas'));
+
+const frutas = ['Banana', 'Uva'];
+const frase = 'Frase qualquer';
+const somar = function(a, b) {
+    return a + b;
 };
-
-Object.defineProperties(moto, {
-    rodas: {
-        get() {
-            return this._rodas;
-        },
-        set(valor) {
-            this._rodas = valor * 4;
-        }
-    }
-})
-
-console.log(moto);
-
-console.log(Object.getOwnPropertyDescriptors(moto));
-
-const innerHeightConfig = Object.getOwnPropertyDescriptor(window, 'innerHeight');
-
-console.log(innerHeightConfig.configurable);
-
-console.log(Object.keys(moto));
-console.log(Object.values(moto));
-console.log(Object.entries(moto));
-
-const frutas = ['Banana'];
-
-console.log(Object.getPrototypeOf(frutas));
-console.log(Object.getPrototypeOf(''));
-console.log(Array.prototype);
-
-const frutas1 = ['Banana', 'Pêra'];
-const frutas2 = ['Banana', 'Pêra'];
-const novaFruta = frutas1;
-
-console.log(Object.is(frutas1, frutas2));
-console.log(Object.is(frutas1, novaFruta));
-
-novaFruta[0] = 'Uva';
-
-console.log(Object.is(frutas1, novaFruta));
-
 const carro = {
-    marca: 'Ford',
-    ano: 2018,
+    portas: 4,
+    marca: 'Honda',
 }
 
-// Object.seal(carro);
-Object.preventExtensions(carro);
-carro.portas = 4;
-delete carro.marca;
-carro.marca = 'Honda';
-
-console.log(carro);
-console.log(Object.isFrozen(carro));
-console.log(Object.isExtensible(carro));
-console.log(Object.isSealed(carro));
+console.log(frutas.toString());
+console.log(frase.toString());
+console.log(somar.toString());
+console.log(carro.toString());
+console.log(Object.prototype.toString.call(frutas));
+console.log(Object.prototype.toString.call(frase));
+console.log(Object.prototype.toString.call(somar));
+console.log(Object.prototype.toString.call(carro));
