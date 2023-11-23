@@ -41,31 +41,7 @@ function initAccordion() {
 };
 initAccordion();
 
-function initScrollSuave() {
-    const linksInternos = document.querySelectorAll('[data-menu="nav"] a[href^="#"]');
 
-    function scrollToSection(event) {
-        event.preventDefault();
-        const href = event.currentTarget.getAttribute('href');
-        const section = document.querySelector(href);
-    
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-    
-        //forma alternativa
-        // const topo = section.offsetTop;
-        // window.scrollTo({
-        //     top: topo,
-        //     behavior: 'smooth',
-        // });
-    };
-    
-    linksInternos.forEach((link) => {
-        link.addEventListener('click', scrollToSection);
-    });
-};
 
 function initAnimacaoScroll() {
     const sections = document.querySelectorAll('[data-tab="scroll"]');
