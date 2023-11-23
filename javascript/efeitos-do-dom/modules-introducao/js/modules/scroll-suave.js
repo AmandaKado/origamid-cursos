@@ -1,4 +1,4 @@
-function initScrollSuave() {
+export default function initScrollSuave() {
     const linksInternos = document.querySelectorAll('[data-menu="nav"] a[href^="#"]');
 
     function scrollToSection(event) {
@@ -23,4 +23,3 @@ function initScrollSuave() {
         link.addEventListener('click', scrollToSection);
     });
 };
-initScrollSuave();
