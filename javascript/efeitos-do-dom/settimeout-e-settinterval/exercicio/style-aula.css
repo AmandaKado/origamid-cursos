@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(135, 135, 240);
+    padding: 0;
+    margin: 0;
+}
+
+body.vermelho {
+    background-color: rgb(255, 172, 172);
+}
