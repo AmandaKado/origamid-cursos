@@ -52,7 +52,7 @@ function puxarPiada() {
     .then(r => r.json())
     .then(piada => {
         paragrafoPiada.innerText = piada.value;
-    })
+    })  
 }
 
 btnProxima.addEventListener('click', puxarPiada);
